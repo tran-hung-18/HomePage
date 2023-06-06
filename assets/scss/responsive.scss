@@ -1,155 +1,60 @@
 @media screen and (max-width: 768px) {
     .header {
         background-color: white;
-        position: fixed;
-        .container{
+        height: 69px;
+        padding: 0;
+
+        .container-header{
             padding: 0;
-            height: $height-header;
             align-items: center;
-            i{
-                font-size: 25px;       
-            }
-            .header-navbar{
-                display: block;
-                .icon-showMenu:hover{
-                    @include hover;
-                }
-                .menu-mobile{
-                    width: 0%;
-                    overflow: hidden;
-                    @include flex-center;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    position: fixed;
-                    inset: 0;
-                    transition: all 0.2s linear;
+            height: 100%;
 
-                    .layout{
-                        position: relative;
-                        width: 50%;
-                        background-color: white;
-                        height: 100%;
-                        z-index: 3;
+            .header-mobile{
+                @include flexCenter;
+                justify-content: space-between;
+                height: 100%;
+                padding: 0 23px 0 22px;
 
-                        .logo-header{
-                            width: 100%;
-                            padding: 10px 30px;
-                            border-bottom: 1px solid $color-border;
-                        }
-                        .icon-closeMenu{
-                            position: absolute;
-                            top: 10px;
-                            right: 10px;
-                            font-size: 23px;
-                            cursor: pointer;
-                        }
-                        .icon-closeMenu:hover{
-                            @include hover;
-                        }
-                        .item-navbar{
-                            width: 100%;
-                            padding :20px 30px;  
-                            @include flex-center;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: flex-start;
-                            list-style: none;
-                            li{
-                                @include flex-center;
-                                align-items: center;
-                                margin: 10px 0;
-                                span{
-                                    margin-left: 15px;
-                                }
-                                :hover{
-                                    @include hover;
-                                    font-weight: 500;
-                                }
-                            }
-                        }
-                    }
+                .icon-showMenu{
+                    width: 35px;
+                    height: 37px;
                 }
-            }
-            .header-search{
-                display: block;
+                .icon-showSearch{
+                    width: 19px;
+                }
                 i:hover{
                     @include hover;
                 }
-                .search-mobile{
-                    width: 0;
-                    overflow: hidden;
-                    @include flex-center;
-                    flex-direction: column;
-                    align-items: flex-end;
-                    position: fixed;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    transition: all 0.2s linear;
-
-                    .layout{
-                        position: relative;
-                        width: 60%;
-                        background-color: white;
-                        height: 100%;
-                        z-index: 3;
-                        .logo-header{
-                            width: 100%;
-                            padding: 10px 20px;
-                            border-bottom: 1px solid $color-border;
-                        }
-                        .search-header{
-                            position: relative;
-                            margin: 20px auto 0;
-                            width: 90%; 
-                            @include flex-center;
-                            input{
-                                width: 100%;
-                                padding: 6px 15px;
-                                border: 1px solid $color-border;
-                                border-radius: 5px;
-                            }
-                            i{
-                                position: absolute;
-                                right: 10px;
-                            }
-                        }
-                    }
-                    
-                }
-                .icon-closeSearch{
-                    position: absolute;
-                    top: 10px;
-                    right: 10px;
-                    font-size: 23px;
-                    cursor: pointer;
-                }
-                .icon_closeSearch:hover{
-                    color: red;
-                }
-            }
-            
-            .header-right{
-                display: none;
-            }
-            .header-left{
-                display: block;
-                width: auto;
-                .search-header{
-                    display: none;
-                }
                 .logo-header{
-                    margin: 0;
+                    @include flexCenter;
+                    width: 137px;
+                    height: 45px;
+                    margin: 12px 0;
+                    img{
+                        width: 47px;
+                        height: 100%;
+                    }
+                    h4{
+                        height: 34px;
+                        width: 90px;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 29px;
+                    }
                 }
+
+            }
+
+            .header-desktop{
+                display: none;
             }
         }
     }
     .body{
-        margin-top: $height-header;
         .img-title{
-            height: 350px;
+            min-height: 100px;
             img{
-                height: 100%;
+                object-fit: none ;
             }
         }
         .list-blog{
@@ -168,6 +73,120 @@
     
                 .item-blog{
                     width: 100%;
+                }
+            }
+            .paging{
+                @include flexCenter;
+                justify-content: center;
+                margin-bottom: 53px;
+            }
+        }
+        
+    }
+
+    .search-mobile{
+        width: 0;
+        overflow: hidden;
+        @include flexCenter;
+        flex-direction: column;
+        align-items: flex-end;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        transition: all 0.2s linear;
+
+        .layout{
+            position: relative;
+            width: 60%;
+            background-color: white;
+            height: 100%;
+            z-index: 3;
+            .logo-header{
+                width: 100%;
+                padding: 10px 20px;
+                border-bottom: 1px solid $color-border;
+            }
+            .search-header{
+                position: relative;
+                margin: 20px auto 0;
+                width: 90%; 
+                @include flexCenter;
+                input{
+                    width: 100%;
+                    padding: 6px 15px;
+                    border: 1px solid $color-border;
+                    border-radius: 5px;
+                }
+                i{
+                    position: absolute;
+                    right: 10px;
+                }
+            }
+            .icon-closeSearch{
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 23px;
+                cursor: pointer;
+            }
+            .icon-closeSearch:hover{
+                color: red;
+            }
+        }
+        
+    }
+    .menu-mobile{
+        width: 0%;
+        overflow: hidden;
+        @include flexCenter;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        inset: 0;
+        transition: all 0.2s linear;
+
+        .layout{
+            position: relative;
+            width: 50%;
+            background-color: white;
+            height: 100%;
+            z-index: 3;
+
+            .logo-header{
+                width: 100%;
+                padding: 10px 30px;
+                border-bottom: 1px solid $color-border;
+            }
+            .icon-closeMenu{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 23px;
+                cursor: pointer;
+            }
+            .icon-closeMenu:hover{
+                @include hover;
+            }
+            .item-navbar{
+                width: 100%;
+                padding :20px 30px;  
+                @include flexCenter;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                list-style: none;
+                li{
+                    @include flexCenter;
+                    align-items: center;
+                    margin: 10px 0;
+                    span{
+                        margin-left: 15px;
+                    }
+                    :hover{
+                        @include hover;
+                        font-weight: 500;
+                    }
                 }
             }
         }

@@ -15,77 +15,83 @@
 <body>
     
     <div class="header">
-        <div class="container">
-            <div class="header-navbar">
-                <i class="fa-solid fa-bars icon-showMenu" onclick="menuMobile(100)"></i>
-                <div class="menu-mobile">
-                    <div class="modal"></div>
-                    <div class="layout">
-                        <div class="logo-header">
-                            <img src="./assets/img/Group 155.png" alt="">
-                        </div>
-                        <ul class="item-navbar">
-                            <li>
-                                <i class="fa-solid fa-user"></i>
-                                <span>Thông tin</span>
-                            </li>
-                            <li>
-                                <i class="fa-sharp fa-solid fa-shield"></i>
-                                <span>Bảo mật</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-headset"></i>
-                                <span>Hỗ trợ</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-right-from-bracket"></i>
-                                <span>Đăng xuất</span>
-                            </li>
-                        </ul>
-                        <i class="fa-solid fa-xmark icon-closeMenu" onclick="menuMobile(0)"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="header-left">    
+        <div class="container-header">
+            <div class="header-mobile">
+                <img src="./assets/img/Vector.svg" class="icon-showMenu" onclick="menuMobile(100)" alt="">
+                
                 <div class="logo-header">
-                    <!-- <img src="./assets/img/7d85462e-ed1f-4b7b-b617-ad57854a2ac0 (1) 1.png" alt="">
-                    <h4>RT-Blogs</h4> -->
-                    <img src="./assets/img/Group 155.png" alt="">
+                    <img src="./assets/img/7d85462e-ed1f-4b7b-b617-ad57854a2ac0 (1) 1.png" alt="">
+                    <h4>RT-Blogs</h4>
                 </div>
-                <div class="search-header">
-                    <input type="text" placeholder="Search blog">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </div>
-            <div class="header-right">
-                <div class="header-tag">
-                    <button>Top</button>
-                    <h4>Create Blog</h4>
-                </div>
-                <div class="header-account">
-                    <h4>tranhung</h4>
-                    <i class="fa-regular fa-circle-user"></i>
-                </div>
+                <img src="./assets/img/Search.svg" class="icon-showSearch" onclick="searchMobile(100)" alt="">
+
             </div>
 
-            <div class="header-search">
-                <i class="fa-solid fa-magnifying-glass icon-showSearch" onclick="searchMobile(100)"></i>
-                <div class="search-mobile">
-                    <div class="modal"></div>
-                    <div class="layout">
-                        <div class="logo-header">
-                            <img src="./assets/img/Group 155.png" alt="">
-                        </div>
-                        <div class="search-header">
-                            <input type="text" placeholder="Search blog">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-                        <i class="fa-solid fa-xmark icon-closeSearch" onclick="searchMobile(0)"></i>
+            <div class="header-desktop">
+                <div class="header-left">    
+                    <div class="logo-header">
+                        <!-- <img src="./assets/img/7d85462e-ed1f-4b7b-b617-ad57854a2ac0 (1) 1.png" alt="">
+                        <h4>RT-Blogs</h4> -->
+                        <img src="./assets/img/Group 155.png" alt="">
+                    </div>
+                    <div class="search-header">
+                        <input type="text" placeholder="Search blog">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-tag">
+                        <button>Top</button>
+                        <p>Create Blog</p>
+                    </div>
+                    <div class="header-account">
+                        <p>tranhung</p>
+                        <i class="fa-regular fa-circle-user"></i>
                     </div>
                 </div>
             </div>
+
         </div>   
+    </div>
+    <div class="search-mobile">
+        <div class="modal"></div>
+        <div class="layout">
+            <div class="logo-header">
+                <img src="./assets/img/Group 155.png" alt="">
+            </div>
+            <div class="search-header">
+                <input type="text" placeholder="Search blog">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <i class="fa-solid fa-xmark icon-closeSearch" onclick="searchMobile(0)"></i>
+        </div>
+    </div>
+    <div class="menu-mobile">
+        <div class="modal"></div>
+        <div class="layout">
+            <div class="logo-header">
+                <img src="./assets/img/Group 155.png" alt="">
+            </div>
+            <ul class="item-navbar">
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <span>Thông tin</span>
+                </li>
+                <li>
+                    <i class="fa-sharp fa-solid fa-shield"></i>
+                    <span>Bảo mật</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-headset"></i>
+                    <span>Hỗ trợ</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Đăng xuất</span>
+                </li>
+            </ul>
+            <i class="fa-solid fa-xmark icon-closeMenu" onclick="menuMobile(0)"></i>
+        </div>
     </div>
 
     <div class="body">
@@ -110,11 +116,11 @@
                     <div class="item-blog-content">
                         <div class="info">
                             <div class="author">
-                                <i class="fa-regular fa-user"></i>
+                                <img src="./assets/img/Group 25.svg" alt="">
                                 <p>Jimmy Nguyễn</p>
                             </div>
                             <div class="time">
-                                <i class="fa-regular fa-clock"></i>
+                                <img src="./assets/img/Group 38.svg" alt="">
                                 <p>3 mins ago</p>
                             </div>
                         </div>
@@ -123,7 +129,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur ipsum linum amataki hulanjfh bfueodap fiefhief...</p>
                         </div>
                         <div class="text-link">
-                            <button class="btn btn-details">Read More&ensp;  &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-details"><p>Read more</p> <img src="./assets/img/Vector-Btn.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -134,11 +140,11 @@
                     <div class="item-blog-content">
                         <div class="info">
                             <div class="author">
-                                <i class="fa-regular fa-user"></i>
+                                <img src="./assets/img/Group 25.svg" alt="">
                                 <p>Jimmy Nguyễn</p>
                             </div>
                             <div class="time">
-                                <i class="fa-regular fa-clock"></i>
+                                <img src="./assets/img/Group 38.svg" alt="">
                                 <p>3 mins ago</p>
                             </div>
                         </div>
@@ -147,7 +153,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur ipsum linum amataki hulanjfh bfueodap fiefhief...</p>
                         </div>
                         <div class="text-link">
-                            <button class="btn btn-details">Read More&ensp;  &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-details"><p>Read more</p> <img src="./assets/img/Vector-Btn.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -158,11 +164,11 @@
                     <div class="item-blog-content">
                         <div class="info">
                             <div class="author">
-                                <i class="fa-regular fa-user"></i>
+                                <img src="./assets/img/Group 25.svg" alt="">
                                 <p>Jimmy Nguyễn</p>
                             </div>
                             <div class="time">
-                                <i class="fa-regular fa-clock"></i>
+                                <img src="./assets/img/Group 38.svg" alt="">
                                 <p>3 mins ago</p>
                             </div>
                         </div>
@@ -171,7 +177,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur ipsum linum amataki hulanjfh bfueodap fiefhief...</p>
                         </div>
                         <div class="text-link">
-                            <button class="btn btn-details">Read More&ensp;  &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-details"><p>Read more</p> <img src="./assets/img/Vector-Btn.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -182,11 +188,11 @@
                     <div class="item-blog-content">
                         <div class="info">
                             <div class="author">
-                                <i class="fa-regular fa-user"></i>
+                                <img src="./assets/img/Group 25.svg" alt="">
                                 <p>Jimmy Nguyễn</p>
                             </div>
                             <div class="time">
-                                <i class="fa-regular fa-clock"></i>
+                                <img src="./assets/img/Group 38.svg" alt="">
                                 <p>3 mins ago</p>
                             </div>
                         </div>
@@ -195,7 +201,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur ipsum linum amataki hulanjfh bfueodap fiefhief...</p>
                         </div>
                         <div class="text-link">
-                            <button class="btn btn-details">Read More&ensp;  &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-details"><p>Read more</p> <img src="./assets/img/Vector-Btn.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -206,11 +212,11 @@
                     <div class="item-blog-content">
                         <div class="info">
                             <div class="author">
-                                <i class="fa-regular fa-user"></i>
+                                <img src="./assets/img/Group 25.svg" alt="">
                                 <p>Jimmy Nguyễn</p>
                             </div>
                             <div class="time">
-                                <i class="fa-regular fa-clock"></i>
+                                <img src="./assets/img/Group 38.svg" alt="">
                                 <p>3 mins ago</p>
                             </div>
                         </div>
@@ -219,7 +225,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur ipsum linum amataki hulanjfh bfueodap fiefhief...</p>
                         </div>
                         <div class="text-link">
-                            <button class="btn btn-details">Read More&ensp;  &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-details"><p>Read more</p> <img src="./assets/img/Vector-Btn.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -230,11 +236,11 @@
                     <div class="item-blog-content">
                         <div class="info">
                             <div class="author">
-                                <i class="fa-regular fa-user"></i>
+                                <img src="./assets/img/Group 25.svg" alt="">
                                 <p>Jimmy Nguyễn</p>
                             </div>
                             <div class="time">
-                                <i class="fa-regular fa-clock"></i>
+                                <img src="./assets/img/Group 38.svg" alt="">
                                 <p>3 mins ago</p>
                             </div>
                         </div>
@@ -243,7 +249,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur ipsum linum amataki hulanjfh bfueodap fiefhief...</p>
                         </div>
                         <div class="text-link">
-                            <button class="btn btn-details">Read More&ensp;  &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-details"><p>Read more</p> <img src="./assets/img/Vector-Btn.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -254,11 +260,11 @@
                     <div class="item-blog-content">
                         <div class="info">
                             <div class="author">
-                                <i class="fa-regular fa-user"></i>
+                                <img src="./assets/img/Group 25.svg" alt="">
                                 <p>Jimmy Nguyễn</p>
                             </div>
                             <div class="time">
-                                <i class="fa-regular fa-clock"></i>
+                                <img src="./assets/img/Group 38.svg" alt="">
                                 <p>3 mins ago</p>
                             </div>
                         </div>
@@ -267,7 +273,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur ipsum linum amataki hulanjfh bfueodap fiefhief...</p>
                         </div>
                         <div class="text-link">
-                            <button class="btn btn-details">Read More&ensp;  &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-details"><p>Read more</p> <img src="./assets/img/Vector-Btn.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -278,11 +284,11 @@
                     <div class="item-blog-content">
                         <div class="info">
                             <div class="author">
-                                <i class="fa-regular fa-user"></i>
+                                <img src="./assets/img/Group 25.svg" alt="">
                                 <p>Jimmy Nguyễn</p>
                             </div>
                             <div class="time">
-                                <i class="fa-regular fa-clock"></i>
+                                <img src="./assets/img/Group 38.svg" alt="">
                                 <p>3 mins ago</p>
                             </div>
                         </div>
@@ -291,7 +297,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur ipsum linum amataki hulanjfh bfueodap fiefhief...</p>
                         </div>
                         <div class="text-link">
-                            <button class="btn btn-details">Read More&ensp;  &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-details"><p>Read more</p> <img src="./assets/img/Vector-Btn.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -302,11 +308,11 @@
                     <div class="item-blog-content">
                         <div class="info">
                             <div class="author">
-                                <i class="fa-regular fa-user"></i>
+                                <img src="./assets/img/Group 25.svg" alt="">
                                 <p>Jimmy Nguyễn</p>
                             </div>
                             <div class="time">
-                                <i class="fa-regular fa-clock"></i>
+                                <img src="./assets/img/Group 38.svg" alt="">
                                 <p>3 mins ago</p>
                             </div>
                         </div>
@@ -315,7 +321,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur ipsum linum amataki hulanjfh bfueodap fiefhief...</p>
                         </div>
                         <div class="text-link">
-                            <button class="btn btn-details">Read More&ensp;  &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-details"><p>Read more</p> <img src="./assets/img/Vector-Btn.svg" alt=""></button>
                         </div>
                     </div>
                 </div>

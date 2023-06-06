@@ -1,16 +1,27 @@
 $color-primary: #C40000;
 $color-border: #CCCCCC;
-$height-header: 80px;
-
-// @mixin font-face {
-//     font-family: 'SVN-Gilroy';
-//     src: url('../fonts/SVN-Gilroy\ Bold.otf');
-// }
+$border-btn: #E4E4E4;
+$color-btn: #770303;
+$color-header: #212121;
 
 @mixin fontHeader{
     font-family: 'Noto Sans JP';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: $color-header;
+}
+@mixin movePage{
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+@mixin fontInfoImg{
+    height: 31px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
 }
 @mixin modal{
     position: fixed;
@@ -18,7 +29,7 @@ $height-header: 80px;
     background-color: rgba(255, 255, 255, 0.095);
     z-index: 2;
 }
-@mixin flex-center{
+@mixin flexCenter{
     display: flex;
     align-items: center;
 }
@@ -31,8 +42,5 @@ body {
     box-sizing: border-box;
     input, h1, h2, h3, h4, p{
         margin: 0;
-    }
-    p{
-        font-size: 18px;
     }
 }

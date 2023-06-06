@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded",function(){
-
-
-});
 function menuMobile(value){
     document.querySelector('.menu-mobile').style.width = `${value}%`;
 }

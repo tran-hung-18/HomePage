@@ -1,8 +1,15 @@
+.menu-mobile, .search-mobile{
+    display: none;
+    width: 0%;
+}
+
 .body{
     .img-title{
         width: 100%;
+        height: 519px;
         img{
             width: 100%;
+            height: 100%;
         }
     }
     .container{
@@ -11,84 +18,124 @@
         padding: 0;
 
         .title{
-            @include flex-center;
+            @include flexCenter;
             justify-content: space-between;
             width: 100%;
-            margin-bottom: 30px;
+            margin: 72.5px 0 38px;
     
             h1{
-                width: 40%;
-                padding: 0;
-                @include fontHeader;
+                width: 446px;
+                height: 68px;
+                @include flexCenter;
+                font: normal 700 50px/72px "Noto Sans JP";
             }
             select{
-                width: 10%;
+                border-radius: 4px;
+                width: 144px;
+                height: 40px;;
                 font-weight: 500;
             }
         }
         .all-item{
             width: 100%;
-            @include flex-center;
+            @include flexCenter;
             justify-content: space-between;
             flex-wrap: wrap;
             .item-blog{
                 width: 32%;
-                padding: 0;
-                border-radius: 3px;
-                margin-bottom: 80px;
+                border-radius: 8px;
+                margin-bottom: 70px;
+                background: #FFFFFF;
+                border: 1px solid #CCCCCC;
     
                 .item-blog-img{
                     width: 100%;
-                    border-radius: 4px;
+                    margin-bottom: 25px;
+                    cursor: pointer;
+
                     img{
                         width: 100%;
+                        border-radius: 8px 8px 0px 0px;
                         transition: transform 0.3s;
                     }
                     img:hover{
                         transform: scale(1.02);
-                        cursor: pointer;
                     }
                 }
                 .item-blog-content{
-                    border: 1px solid $color-border;
+                    margin: 0 13px 0 20px;
                     border-radius: 0 0 6px 6px;
-                    padding: 15px;
     
                     .info{
-                        width: 100%;
-                        margin-bottom: 20px;
-                        @include flex-center;
+                        height: 31px;
+                        margin: 0 0 15px 0;
+                        @include flexCenter;
                         justify-self: start;
     
                         .author{
-                            flex: 1;
-                            @include flex-center;
+                            @include flexCenter;
+                            img{
+                                width: 24px;
+                                height: 24px;
+                                margin-right: 4px;
+                            }
+                            p{
+                                width: 128px;
+                                @include fontInfoImg;
+                            }
                         }
                         .time{
                             width: 45%;
-                            @include flex-center;
-                        }
-                        p{
-                            margin-left: 10px;
+                            @include flexCenter;
+                            img{
+                                width: 24px;
+                                height: 24px;
+                                margin: 0 8px 0 21px;
+                            }
+                            p{
+                                width: 102px;
+                                @include fontInfoImg;
+                            }
                         }
                     }
                     .text-detail{
-                        margin-bottom: 20px;
                         p:first-child{
-                            font-weight: bold;
+                            margin-bottom: 10px;
                             font-size: 20px;
+                            font-weight: 700;
+                            line-height: 28px;  
                         }
                         p{
-                            margin-bottom: 10px;
+                            margin-bottom: 29px;
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 25px;
+                            letter-spacing: 0em;
                         }
                     }
                     .text-link{
                         .btn-details{
-                            color: $color-primary;
-                            border: 1px solid $color-border;
-                            background-color: white;
-                            padding: 10px auto 10px 15px !important;
+                            @include flexCenter;
+                            width: 137px;
+                            height: 40px;
+                            margin-bottom: 31px;
+                            border: 1px solid $border-btn;
+                            padding: 10px 20px 10px 15px ;
                             transition: all 0.3s linear;
+                            color: $color-primary;
+
+                            p{
+                                width: 76px;
+                                height: 20px;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 20px;
+                                margin-right: 8px;
+                            }
+                            img{
+                                width:18px;
+                                height: 8px;
+                            }
                         }
                         .btn-details:hover{
                             color: white;
@@ -100,25 +147,41 @@
             }
         }
         .paging{
-            @include flex-center;
+            @include flexCenter;
             justify-content: center;
-            margin: 0 auto;
+            margin: 0 auto 96px;
             p{
-                margin: 0 5px;
-                padding: 7px 15px;
                 border-radius: 50%;
-                font-size: 20px;
                 font-weight: 700;
+                font-size: 20px;
+                line-height: 28px;
+                color: #211E3B;
+                @include flexCenter;
+                justify-content: center;
+
                 cursor: pointer;
                 transition: all 0.2s linear;
+                i{
+                    text-align: center;
+                }
+            }
+            p:nth-child(2), p:nth-child(5), p:nth-child(6){
+                margin-right: 29px;
             }
             p:first-child{
-                color: white;
+                @include movePage;
+                margin-right: 21px;
                 background-color: $color-primary;
             }
             p:last-child{
-                color: white;
+                @include movePage;
+                margin-left: 26px;
                 background-color: #E5E5E5;
+            }
+            .active {
+                width: 32px;
+                height: 32px;
+                margin: 0 18px;
             }
             p:hover , .active{
                 background-color: #FFE4E4;
