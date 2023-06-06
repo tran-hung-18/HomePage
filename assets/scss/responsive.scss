@@ -1,0 +1,175 @@
+@media screen and (max-width: 768px) {
+    .header {
+        background-color: white;
+        position: fixed;
+        .container{
+            padding: 0;
+            height: $height-header;
+            align-items: center;
+            i{
+                font-size: 25px;       
+            }
+            .header-navbar{
+                display: block;
+                .icon-showMenu:hover{
+                    @include hover;
+                }
+                .menu-mobile{
+                    width: 0%;
+                    overflow: hidden;
+                    @include flex-center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    position: fixed;
+                    inset: 0;
+                    transition: all 0.2s linear;
+
+                    .layout{
+                        position: relative;
+                        width: 50%;
+                        background-color: white;
+                        height: 100%;
+                        z-index: 3;
+
+                        .logo-header{
+                            width: 100%;
+                            padding: 10px 30px;
+                            border-bottom: 1px solid $color-border;
+                        }
+                        .icon-closeMenu{
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            font-size: 23px;
+                            cursor: pointer;
+                        }
+                        .icon-closeMenu:hover{
+                            @include hover;
+                        }
+                        .item-navbar{
+                            width: 100%;
+                            padding :20px 30px;  
+                            @include flex-center;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            list-style: none;
+                            li{
+                                @include flex-center;
+                                align-items: center;
+                                margin: 10px 0;
+                                span{
+                                    margin-left: 15px;
+                                }
+                                :hover{
+                                    @include hover;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .header-search{
+                display: block;
+                i:hover{
+                    @include hover;
+                }
+                .search-mobile{
+                    width: 0;
+                    overflow: hidden;
+                    @include flex-center;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    transition: all 0.2s linear;
+
+                    .layout{
+                        position: relative;
+                        width: 60%;
+                        background-color: white;
+                        height: 100%;
+                        z-index: 3;
+                        .logo-header{
+                            width: 100%;
+                            padding: 10px 20px;
+                            border-bottom: 1px solid $color-border;
+                        }
+                        .search-header{
+                            position: relative;
+                            margin: 20px auto 0;
+                            width: 90%; 
+                            @include flex-center;
+                            input{
+                                width: 100%;
+                                padding: 6px 15px;
+                                border: 1px solid $color-border;
+                                border-radius: 5px;
+                            }
+                            i{
+                                position: absolute;
+                                right: 10px;
+                            }
+                        }
+                    }
+                    
+                }
+                .icon-closeSearch{
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    font-size: 23px;
+                    cursor: pointer;
+                }
+                .icon_closeSearch:hover{
+                    color: red;
+                }
+            }
+            
+            .header-right{
+                display: none;
+            }
+            .header-left{
+                display: block;
+                width: auto;
+                .search-header{
+                    display: none;
+                }
+                .logo-header{
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .body{
+        margin-top: $height-header;
+        .img-title{
+            height: 350px;
+            img{
+                height: 100%;
+            }
+        }
+        .list-blog{
+            .title{
+                h1{
+                    width: 40%;
+                }
+                select{
+                    width: 30%;
+                }
+            }
+            .all-item{
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: wrap;
+    
+                .item-blog{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

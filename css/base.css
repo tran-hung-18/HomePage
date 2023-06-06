@@ -1,0 +1,8 @@
+body {
+  color: green;
+  position: relative;
+  box-sizing: border-box; }
+  body input, body h1, body h2, body h3, body h4, body p {
+    margin: 0; }
+  body p {
+    font-size: 18px; }
