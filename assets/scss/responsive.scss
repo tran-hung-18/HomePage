@@ -260,6 +260,27 @@
                 width: 100%;
                 @include flexCenter;
                 justify-content: center;
+                li {
+                    width: 30px;
+                    height: 30px;
+                    a {
+                        color: #211E3B;
+                        font-size: 18px;
+                    }
+                }
+                li:hover, li:nth-child(4) {
+                    a {
+                        color: $color-primary;
+                    }
+                }
+                li:first-child, li:last-child {
+                    width: 40px;
+                    height: 32px;
+                }
+
+                li + li {
+                    margin-left: 10px;
+                }
             }
         }
     }

@@ -142,6 +142,7 @@
             }
         }
         .paging {
+            position: relative;
             @include flexCenter;
             justify-content: center;
             li {
