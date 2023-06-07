@@ -1,87 +1,109 @@
-.header{
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.65);
+    height: 122px;
 
-    .container{
-        @include flex-center;
-        justify-content: space-between;
-        padding: 25px 0;
-        
-        .header-navbar, .header-search{
+    .container-header {
+        width: 100%;
+        margin: 0 !important;
+        transition: transform .5s linear;
+        transform: translateY(0);
+        background-color: rgba(255, 255, 255, 0.65);
+        padding: 30px 0 31px;
+        .header-mobile {
             display: none;
         }
-
-        .header-left{
-            @include flex-center;
-            width: 45%;
-            .logo-header{
-                margin-right: 20px;
-                cursor: pointer;
-                // @include flex-center;
-                // img {
-                //     width: 60px;
-                //     height: 60px;
-                // }
-                // h4{
-                //     margin-left: 5px;
-                //     @include fontHeader;
-                // }
-            }
-            .search-header{
-                position: relative;
-                width: 60%; 
-                @include flex-center;
-                input{
-                    width: 100%;
-                    padding: 6px 15px;
-                    border: 0px;
-                    border-radius: 5px;
-                }
-                i{
-                    position: absolute;
-                    right: 5%;
-                }
-            }
-        }
-        .header-right{
-            @include flex-center;
+        .header-desktop {
+            @include flexCenter;
             justify-content: space-between;
-            width: 45%; 
-
-            h4{
-                @include fontHeader;
-                font-weight: 700;
-                font-size: 16px;
-                line-height: 29px;
-            }
-            h4:hover{
-                @include hover;
-            }
-            .header-tag{
-                @include flex-center;
-                justify-content: space-between;
-                
-                button{
-                    color: white;
-                    padding: 8px 15px;
-                    margin-right: 30px;
-                    border: 0px;
-                    border-radius: 8px 12px;
-                    background-color: #770303;
+            flex-wrap: wrap;
+            padding: 0 102px;
+            .header-left {
+                @include flexCenter;
+                .logo-header {
+                    margin-right: 33px;
+                    cursor: pointer;
+                }
+                .search-header {
+                    position: relative;
+                    width: 374px; 
+                    @include flexCenter;
+                    input {
+                        width: 100%;
+                        padding: 13px 13px 13px 20px;
+                        border: 0px;
+                        border-radius: 5px;
+                    }
+                    i {
+                        position: absolute;
+                        width: 19px;
+                        height: 19px;
+                        color: #A7A7A7;
+                        right: 0;
+                        margin : 13px ;
+                    }
                 }
             }
-            .header-account{
-                @include flex-center;
-                flex:1;
+            .header-right {
+                @include flexCenter;
                 justify-content: flex-end;
-                i{
-                    font-size: 150%;
-                    margin-left: 10px;
+                width: 45%; 
+                h4 {
+                    @include fontNoto;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 29px;
+                }
+                h4:hover {
+                    @include hover;
+                }
+                .header-tag {
+                    @include flexCenter;
+                    justify-content: flex-end;
+                    margin-right: 106px;
+                    button {
+                        color: white;
+                        width: 51px;
+                        height: 31px;
+                        font-size: 15px;
+                        font-weight: 500;
+                        margin-right:  27px;
+                        border: 0;
+                        border-radius:3px;
+                        outline: none;
+                        background-color: $color-btn;
+                    }
+                    p {
+                        width: 86px;
+                        height: 24px;
+                        @include fontNoto;
+                    }
+                    p:hover {
+                        @include hover;
+                    }
+                }
+                .header-account {
+                    @include flexCenter;
+                    p {
+                        @include fontNoto;
+                        margin-right: 17px;
+                    }
+                    p:hover {
+                        @include hover;
+                    }
+                    i {
+                        color: $color-header;
+                        
+                        font-size: 26px;
+                    }
                 }
             }
         }
+    }
+    .header-scrolled {
+        transform: translateY(-100%);
     }
 }
