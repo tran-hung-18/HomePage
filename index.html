@@ -13,20 +13,16 @@
     <script src="./assets/js/index.js"></script>
 </head>
 <body>
-    
     <div class="header">
         <div class="container-header">
             <div class="header-mobile">
-                <img src="./assets/img/Vector.svg" class="icon-showMenu" onclick="menuMobile(100)" alt="">
-                
+                <img src="./assets/img/Vector.svg" class="icon-show-menu" onclick="menuMobile(100)" alt="">
                 <div class="logo-header">
                     <img src="./assets/img/7d85462e-ed1f-4b7b-b617-ad57854a2ac0 (1) 1.png" alt="">
                     <h4>RT-Blogs</h4>
                 </div>
-                <img src="./assets/img/Search.svg" class="icon-showSearch" onclick="searchMobile(100)" alt="">
-
+                <img src="./assets/img/Search.svg" class="icon-show-search" onclick="searchMobile(100)" alt="">
             </div>
-
             <div class="header-desktop">
                 <div class="header-left">    
                     <div class="logo-header">
@@ -50,7 +46,6 @@
                     </div>
                 </div>
             </div>
-
         </div>   
     </div>
     <div class="search-mobile">
@@ -63,7 +58,7 @@
                 <input type="text" placeholder="Search blog">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <i class="fa-solid fa-xmark icon-closeSearch" onclick="searchMobile(0)"></i>
+            <i class="fa-solid fa-xmark icon-close-search" onclick="searchMobile(0)"></i>
         </div>
     </div>
     <div class="menu-mobile">
@@ -72,33 +67,27 @@
             <div class="logo-header">
                 <img src="./assets/img/Group 155.png" alt="">
             </div>
-            <ul class="item-navbar">
-                <li>
-                    <i class="fa-solid fa-user"></i>
-                    <span>Thông tin</span>
-                </li>
-                <li>
-                    <i class="fa-sharp fa-solid fa-shield"></i>
-                    <span>Bảo mật</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-headset"></i>
-                    <span>Hỗ trợ</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <span>Đăng xuất</span>
-                </li>
-            </ul>
-            <i class="fa-solid fa-xmark icon-closeMenu" onclick="menuMobile(0)"></i>
+            <div class="header-right">
+                <div class="header-right-item">
+                    <button>Top</button>
+                </div>
+                <div class="header-right-item">
+                    <p>Create Blog</p>
+                </div>
+                <div class="header-right-item">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <p>myname</p>
+                </div>
+
+            </div>
+            <i class="fa-solid fa-xmark icon-close-menu" onclick="menuMobile(0)"></i>
         </div>
     </div>
-
     <div class="body">
         <div class="img-title">
             <img src="./assets/img/laptop-in-modern-office 1.png" alt="">
         </div>
-        <div class="container list-blog">
+        <div class="list-blog">
             <div class="title">
                 <h1>List Blog</h1>
                 <select class="form-select" aria-label="Default select example">
@@ -129,7 +118,10 @@
                             <p>Lorem ipsum dolor sit amet, consectetur ipsum linum amataki hulanjfh bfueodap fiefhief...</p>
                         </div>
                         <div class="text-link">
-                            <button class="btn btn-details"><p>Read more</p> <img src="./assets/img/Vector-Btn.svg" alt=""></button>
+                            <button class="btn btn-details">
+                                <p>Read more</p> 
+                                <img src="./assets/img/Vector-Btn.svg" alt="">
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -177,7 +169,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur ipsum linum amataki hulanjfh bfueodap fiefhief...</p>
                         </div>
                         <div class="text-link">
-                            <button class="btn btn-details"><p>Read more</p> <img src="./assets/img/Vector-Btn.svg" alt=""></button>
+                            <button class="btn btn-details"><p>Read more</p><img src="./assets/img/Vector-Btn.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -326,25 +318,24 @@
                     </div>
                 </div>
             </div>
-            <div class="paging">
-                <p class="item-paging">
+            <ul class="paging">
+                <li>
                     <i class="fa-solid fa-angle-left"></i>
-                </p>
-                <p class="item-paging">1</p>
-                <p class="item-paging">2</p>
-                <p class="item-paging active">3</p>
-                <p class="item-paging">4</p>
-                <p class="item-paging">5</p>
-                <p class="item-paging">6</p>
-                <p class="item-paging">
+                </li>
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">6</a></li>
+                <li>
                     <i class="fa-solid fa-angle-right"></i>
-                </p>
-            </div>
+                </li>
+            </ul>
         </div>
     </div>
     <footer>
         <p>Copyright 2022. Made by Regit JSC</p>
     </footer>
-
 </body>
 </html>

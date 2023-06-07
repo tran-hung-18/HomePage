@@ -3,37 +3,46 @@ $color-border: #CCCCCC;
 $border-btn: #E4E4E4;
 $color-btn: #770303;
 $color-header: #212121;
-
-@mixin fontHeader{
-    font-family: 'Noto Sans JP';
+@font-face {
+    font-family: "SVN-Gilroy";
+    src: url("/assets/fonts/SVN-Gilroy\ Regular.otf");
+}
+@font-face {
+    font-family: "SVN-Gilroy-Bold";
+    src: url("/assets/fonts/SVN-Gilroy\ Bold.otf");
+}
+@mixin fontNoto {
+    font-family: "Noto Sans JP";
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 15px;
     line-height: 22px;
     color: $color-header;
 }
-@mixin movePage{
+@mixin pagingItem {
+    border-radius: 50%;
     width: 40px;
     height: 40px;
     color: white;
 }
-@mixin fontInfoImg{
+@mixin fontInfoImg {
+    font-family: "SVN-Gilroy";
     height: 31px;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
 }
-@mixin modal{
+@mixin modal {
     position: fixed;
     inset: 0;
     background-color: rgba(255, 255, 255, 0.095);
     z-index: 2;
 }
-@mixin flexCenter{
+@mixin flexCenter {
     display: flex;
     align-items: center;
 }
-@mixin hover{
+@mixin hover {
     color: $color-primary;
     cursor: pointer;
 }
@@ -42,5 +51,14 @@ body {
     box-sizing: border-box;
     input, h1, h2, h3, h4, p{
         margin: 0;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
     }
 }

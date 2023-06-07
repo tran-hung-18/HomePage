@@ -1,10 +1,9 @@
-.menu-mobile, .search-mobile{
+.menu-mobile, .search-mobile {
     display: none;
     width: 0%;
 }
-
-.body{
-    .img-title{
+.body {
+    .img-title {
         width: 100%;
         height: 519px;
         img{
@@ -12,100 +11,96 @@
             height: 100%;
         }
     }
-    .container{
-        margin: 40px auto;
+    .list-blog {
         height: 100%;
         padding: 0;
-
-        .title{
+        margin: 72.5px 101px 96px 102px;
+        .title {
             @include flexCenter;
             justify-content: space-between;
             width: 100%;
-            margin: 72.5px 0 38px;
-    
-            h1{
+            margin-bottom: 38px;
+            h1 {
                 width: 446px;
                 height: 68px;
                 @include flexCenter;
                 font: normal 700 50px/72px "Noto Sans JP";
             }
-            select{
+            select {
                 border-radius: 4px;
                 width: 144px;
                 height: 40px;;
                 font-weight: 500;
             }
         }
-        .all-item{
+        .all-item {
             width: 100%;
             @include flexCenter;
             justify-content: space-between;
             flex-wrap: wrap;
-            .item-blog{
+            .item-blog {
                 width: 32%;
                 border-radius: 8px;
                 margin-bottom: 70px;
                 background: #FFFFFF;
                 border: 1px solid #CCCCCC;
-    
-                .item-blog-img{
+                .item-blog-img {
                     width: 100%;
                     margin-bottom: 25px;
                     cursor: pointer;
-
-                    img{
+                    img {
                         width: 100%;
                         border-radius: 8px 8px 0px 0px;
                         transition: transform 0.3s;
                     }
-                    img:hover{
+                    img:hover {
                         transform: scale(1.02);
                     }
                 }
-                .item-blog-content{
+                .item-blog-content {
                     margin: 0 13px 0 20px;
                     border-radius: 0 0 6px 6px;
-    
-                    .info{
+                    .info {
                         height: 31px;
                         margin: 0 0 15px 0;
                         @include flexCenter;
                         justify-self: start;
-    
-                        .author{
+                        .author {
                             @include flexCenter;
-                            img{
+                            img {
                                 width: 24px;
                                 height: 24px;
                                 margin-right: 4px;
                             }
-                            p{
-                                width: 128px;
+                            p {
                                 @include fontInfoImg;
+                                width: 128px;
                             }
                         }
-                        .time{
+                        .time {
                             width: 45%;
                             @include flexCenter;
-                            img{
+                            img {
                                 width: 24px;
                                 height: 24px;
                                 margin: 0 8px 0 21px;
                             }
-                            p{
+                            p {
                                 width: 102px;
                                 @include fontInfoImg;
                             }
                         }
                     }
-                    .text-detail{
-                        p:first-child{
+                    .text-detail {
+                        p:first-child {
+                            font-family: "SVN-Gilroy";
                             margin-bottom: 10px;
                             font-size: 20px;
                             font-weight: 700;
                             line-height: 28px;  
                         }
-                        p{
+                        p {
+                            font-family: "SVN-Gilroy";
                             margin-bottom: 29px;
                             font-size: 18px;
                             font-weight: 400;
@@ -113,18 +108,18 @@
                             letter-spacing: 0em;
                         }
                     }
-                    .text-link{
-                        .btn-details{
+                    .text-link {
+                        .btn-details {
                             @include flexCenter;
                             width: 137px;
                             height: 40px;
-                            margin-bottom: 31px;
+                            font-family: "SVN-Gilroy";
+                            margin-bottom: 21px;
                             border: 1px solid $border-btn;
                             padding: 10px 20px 10px 15px ;
                             transition: all 0.3s linear;
                             color: $color-primary;
-
-                            p{
+                            p {
                                 width: 76px;
                                 height: 20px;
                                 font-weight: 400;
@@ -132,12 +127,12 @@
                                 line-height: 20px;
                                 margin-right: 8px;
                             }
-                            img{
+                            img {
                                 width:18px;
                                 height: 8px;
                             }
                         }
-                        .btn-details:hover{
+                        .btn-details:hover {
                             color: white;
                             border: 1px solid white;
                             background-color: $color-primary;
@@ -146,46 +141,40 @@
                 }
             }
         }
-        .paging{
+        .paging {
             @include flexCenter;
             justify-content: center;
-            margin: 0 auto 96px;
-            p{
-                border-radius: 50%;
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 28px;
-                color: #211E3B;
+            li {
                 @include flexCenter;
                 justify-content: center;
-
-                cursor: pointer;
-                transition: all 0.2s linear;
-                i{
-                    text-align: center;
-                }
-            }
-            p:nth-child(2), p:nth-child(5), p:nth-child(6){
-                margin-right: 29px;
-            }
-            p:first-child{
-                @include movePage;
-                margin-right: 21px;
-                background-color: $color-primary;
-            }
-            p:last-child{
-                @include movePage;
-                margin-left: 26px;
-                background-color: #E5E5E5;
-            }
-            .active {
                 width: 32px;
                 height: 32px;
-                margin: 0 18px;
+                a {
+                    height: 28px;
+                    font-family: "SVN-Gilroy-Bold";
+                    font-style: normal;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #211E3B;
+                }
             }
-            p:hover , .active{
+            li:hover, li:nth-child(4) {
+                border-radius: 50%;
                 background-color: #FFE4E4;
-                color: $color-primary;
+                a {
+                    color: $color-primary;
+                }
+            }
+            li:first-child {
+                @include pagingItem;
+                background-color: $color-primary;
+            }
+            li:last-child {
+                @include pagingItem;
+                background: #E5E5E5;
+            }
+            li + li {
+                margin-left: 10px;
             }
         }
     }

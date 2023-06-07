@@ -1,43 +1,43 @@
-.header{
-    position: absolute;
+
+.header {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.65);
+    height: 122px;
 
-    .container-header   {
+    .container-header {
         width: 100%;
         margin: 0 !important;
+        transition: transform .5s linear;
+        transform: translateY(0);
+        background-color: rgba(255, 255, 255, 0.65);
         padding: 30px 0 31px;
-        
-        .header-mobile{
+        .header-mobile {
             display: none;
         }
-
-        .header-desktop{
+        .header-desktop {
             @include flexCenter;
             justify-content: space-between;
             flex-wrap: wrap;
             padding: 0 102px;
-            
-            .header-left{
+            .header-left {
                 @include flexCenter;
-                .logo-header{
+                .logo-header {
                     margin-right: 33px;
                     cursor: pointer;
                 }
-                .search-header{
+                .search-header {
                     position: relative;
                     width: 374px; 
                     @include flexCenter;
-    
-                    input{
+                    input {
                         width: 100%;
                         padding: 13px 13px 13px 20px;
                         border: 0px;
                         border-radius: 5px;
                     }
-                    i{
+                    i {
                         position: absolute;
                         width: 19px;
                         height: 19px;
@@ -47,27 +47,24 @@
                     }
                 }
             }
-            .header-right{
+            .header-right {
                 @include flexCenter;
                 justify-content: flex-end;
                 width: 45%; 
-    
-                h4{
-                    @include fontHeader;
+                h4 {
+                    @include fontNoto;
                     font-weight: 700;
                     font-size: 16px;
                     line-height: 29px;
                 }
-                h4:hover{
+                h4:hover {
                     @include hover;
                 }
-
-                .header-tag{
+                .header-tag {
                     @include flexCenter;
                     justify-content: flex-end;
                     margin-right: 106px;
-                    
-                    button{
+                    button {
                         color: white;
                         width: 51px;
                         height: 31px;
@@ -79,25 +76,25 @@
                         outline: none;
                         background-color: $color-btn;
                     }
-                    p{
+                    p {
                         width: 86px;
                         height: 24px;
-                        @include fontHeader;
+                        @include fontNoto;
                     }
-                    p:hover{
+                    p:hover {
                         @include hover;
                     }
                 }
-                .header-account{
+                .header-account {
                     @include flexCenter;
-                    p{
-                        @include fontHeader;
+                    p {
+                        @include fontNoto;
                         margin-right: 17px;
                     }
-                    p:hover{
+                    p:hover {
                         @include hover;
                     }
-                    i{
+                    i {
                         color: $color-header;
                         
                         font-size: 26px;
@@ -105,5 +102,8 @@
                 }
             }
         }
+    }
+    .header-scrolled {
+        transform: translateY(-100%);
     }
 }

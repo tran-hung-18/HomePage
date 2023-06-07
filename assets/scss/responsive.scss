@@ -1,40 +1,68 @@
+@media screen and (max-width: 768px) and (min-width: 577px) {
+    .body {
+        .img-title {
+            height: 454.49px;
+            img {
+                object-fit: none ;
+            }
+        }
+        .list-blog {
+            margin: 70px 68px 53px 64px;
+            .title {
+                h1{
+                    width: auto;
+                }
+                select {
+                    width: 144px;
+                }
+            }
+            .all-item {
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: wrap;
+                .item-blog {
+                    width: 100%;
+                }
+            }
+            .paging {
+                @include flexCenter;
+                justify-content: center;
+            }
+        }
+    }
+}
 @media screen and (max-width: 768px) {
     .header {
-        background-color: white;
         height: 69px;
         padding: 0;
-
-        .container-header{
+        transition: height 3s linear;
+        .container-header {
             padding: 0;
             align-items: center;
             height: 100%;
-
-            .header-mobile{
+            background-color: white;
+            .header-mobile {
                 @include flexCenter;
                 justify-content: space-between;
                 height: 100%;
                 padding: 0 23px 0 22px;
-
-                .icon-showMenu{
+                .icon-show-menu {
                     width: 35px;
                     height: 37px;
                 }
-                .icon-showSearch{
+                .icon-show-search {
                     width: 19px;
                 }
-                i:hover{
-                    @include hover;
-                }
-                .logo-header{
+                .logo-header {
                     @include flexCenter;
                     width: 137px;
                     height: 45px;
                     margin: 12px 0;
-                    img{
+                    img {
                         width: 47px;
                         height: 100%;
                     }
-                    h4{
+                    h4 {
                         height: 34px;
                         width: 90px;
                         font-size: 20px;
@@ -42,49 +70,13 @@
                         line-height: 29px;
                     }
                 }
-
             }
-
-            .header-desktop{
+            .header-desktop {
                 display: none;
             }
         }
     }
-    .body{
-        .img-title{
-            min-height: 100px;
-            img{
-                object-fit: none ;
-            }
-        }
-        .list-blog{
-            .title{
-                h1{
-                    width: 40%;
-                }
-                select{
-                    width: 30%;
-                }
-            }
-            .all-item{
-                flex-direction: column;
-                justify-content: center;
-                flex-wrap: wrap;
-    
-                .item-blog{
-                    width: 100%;
-                }
-            }
-            .paging{
-                @include flexCenter;
-                justify-content: center;
-                margin-bottom: 53px;
-            }
-        }
-        
-    }
-
-    .search-mobile{
+    .search-mobile {
         width: 0;
         overflow: hidden;
         @include flexCenter;
@@ -95,48 +87,46 @@
         right: 0;
         bottom: 0;
         transition: all 0.2s linear;
-
-        .layout{
+        .layout {
             position: relative;
             width: 60%;
             background-color: white;
             height: 100%;
             z-index: 3;
-            .logo-header{
+            .logo-header {
                 width: 100%;
                 padding: 10px 20px;
                 border-bottom: 1px solid $color-border;
             }
-            .search-header{
+            .search-header {
                 position: relative;
                 margin: 20px auto 0;
                 width: 90%; 
                 @include flexCenter;
-                input{
+                input {
                     width: 100%;
                     padding: 6px 15px;
                     border: 1px solid $color-border;
                     border-radius: 5px;
                 }
-                i{
+                i {
                     position: absolute;
                     right: 10px;
                 }
             }
-            .icon-closeSearch{
+            .icon-close-search {
                 position: absolute;
                 top: 20px;
                 right: 20px;
                 font-size: 23px;
                 cursor: pointer;
             }
-            .icon-closeSearch:hover{
+            .icon-close-search:hover {
                 color: red;
             }
         }
-        
     }
-    .menu-mobile{
+    .menu-mobile {
         width: 0%;
         overflow: hidden;
         @include flexCenter;
@@ -146,48 +136,130 @@
         inset: 0;
         transition: all 0.2s linear;
 
-        .layout{
+        .layout {
             position: relative;
             width: 50%;
             background-color: white;
             height: 100%;
             z-index: 3;
-
-            .logo-header{
+            .logo-header {
                 width: 100%;
                 padding: 10px 30px;
                 border-bottom: 1px solid $color-border;
             }
-            .icon-closeMenu{
+            .icon-close-menu {
                 position: absolute;
-                top: 10px;
-                right: 10px;
-                font-size: 23px;
+                top: 15px;
+                right: 15px;
+                font-size: 30px;
                 cursor: pointer;
             }
-            .icon-closeMenu:hover{
+            .icon-close-menu:hover {
                 @include hover;
             }
-            .item-navbar{
-                width: 100%;
-                padding :20px 30px;  
+            .header-right {
                 @include flexCenter;
                 flex-direction: column;
-                justify-content: center;
                 align-items: flex-start;
-                list-style: none;
-                li{
+                .header-right-item {
+                    width: 100%;
                     @include flexCenter;
-                    align-items: center;
-                    margin: 10px 0;
-                    span{
-                        margin-left: 15px;
-                    }
-                    :hover{
-                        @include hover;
+                    padding: 15px 20px;
+                    button {
+                        color: white;
+                        width: 51px;
+                        height: 31px;
+                        font-size: 15px;
                         font-weight: 500;
+                        margin-right:  27px;
+                        border: 0;
+                        border-radius:3px;
+                        outline: none;
+                        background-color: $color-btn;
+                    }
+                    p {
+                        width: 86px;
+                        height: 24px;
+                        @include fontNoto;
+                    }
+                    
+                    i {
+                        margin-right: 10px;
                     }
                 }
+                .header-right-item:hover {
+                    i, p {
+                        @include hover;
+                    }
+                    background-color: rgb(234 234 234 / 92%);                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .body {
+        .img-title {
+            height: 454.49px;
+            img {
+                object-fit: none ;
+            }
+        }
+        .list-blog {
+            margin: 70px 50px 50px;
+            .title {
+            flex-wrap: wrap;    
+                h1 {
+                    width: auto;
+                    font-size: 40px;
+                }
+                select {
+                    width: 135px;
+                }
+            }
+            .all-item {
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: wrap;
+                .item-blog {
+                    width: 100%;
+                    margin-bottom: 50px;
+                    .item-blog-content {
+                        .info {
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            height: auto;
+                            .author {
+                                p {
+                                    width: auto;
+                                    font-size: 15px;
+                                }
+                            }
+                            .time{
+                                width: auto;
+                                img {
+                                    margin: 0 5px 0 0;
+                                }
+                                p {
+                                    width: auto;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                        .text-detail {
+                            p:first-child {
+                                font-size: 18px;
+                            }
+                            p {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .paging {
+                width: 100%;
+                @include flexCenter;
+                justify-content: center;
             }
         }
     }
