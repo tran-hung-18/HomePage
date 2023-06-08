@@ -588,6 +588,9 @@ footer p {
     color: #C40000;
     cursor: pointer;
   }
+  .body .list-blog .all-item .item-blog:last-child {
+    margin-bottom: 67px;
+  }
 }
 @media screen and (max-width: 576px) {
   .body .img-title {

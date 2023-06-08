@@ -195,6 +195,15 @@
             }
         }
     }
+    .body {
+        .list-blog {
+            .all-item {
+                .item-blog:last-child{
+                    margin-bottom: 67px;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 576px) {
     .body {
