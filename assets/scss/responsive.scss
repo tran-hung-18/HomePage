@@ -226,22 +226,21 @@
                     .item-blog-content {
                         margin: 0 13px;
                         .info {
-                            justify-content: space-between;
                             flex-wrap: wrap;
-                            height: auto;
                             .author {
+                                img {
+                                    margin-right: 2px;
+                                }
                                 p {
-                                    width: auto;
                                     font-size: 15px;
+                                    margin-right: 15px;
                                 }
                             }
                             .time{
-                                width: auto;
                                 img {
-                                    margin: 0 5px 0 0;
+                                    margin: 0 4px 0 0;
                                 }
                                 p {
-                                    width: auto;
                                     font-size: 15px;
                                 }
                             }
