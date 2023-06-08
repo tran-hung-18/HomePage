@@ -50,7 +50,6 @@
             .header-right {
                 @include flexCenter;
                 justify-content: flex-end;
-                width: 45%; 
                 h4 {
                     @include fontNoto;
                     font-weight: 700;
